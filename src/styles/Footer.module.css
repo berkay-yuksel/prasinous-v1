@@ -1,0 +1,6 @@
+.fcontainer{
+    background-color: rgba(183, 183, 183, 0.104);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

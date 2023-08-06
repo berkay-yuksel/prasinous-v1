@@ -1,0 +1,14 @@
+.ccontainer{
+
+
+}
+.cart_item_contaier{
+   
+    padding: 0.2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    width: 75%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+}

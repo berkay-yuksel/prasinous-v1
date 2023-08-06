@@ -1,0 +1,27 @@
+.card{
+    border: 1px solid black;
+    margin: 1em;
+    padding: 1em;
+    height: 230px;
+    width: 160px;
+
+}
+.card p{
+    margin-top: 0.5em;
+}
+
+.card button{
+    margin-top: 1em;
+    width: 45%;
+    margin-right: 0.50em;
+    padding: 0.1em;
+   
+}
+
+.ccontainer{
+    display: flex;
+align-items: flex-start;
+flex-wrap: wrap;
+justify-content: center;
+
+}

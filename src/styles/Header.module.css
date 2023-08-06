@@ -1,0 +1,15 @@
+.hcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(181, 181, 181, 0.178);
+    height: 1em;
+}
+.logo{
+    font-size: 2em;
+}
