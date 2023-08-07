@@ -19,12 +19,12 @@ export default async function handler(req, res) {
         };
       });
       const lineItems = validateCartItems(products, cartDetails);
-      await stripe.checkout.sessions.create({
+      const session= await stripe.checkout.sessions.create({
         mode: "payment",
         payment_method_types: ['card'],
         line_items:lineItems,
-        success_url: `req.headers.origin/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url:`req.headers.origin/cart`
+        success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url:`${req.headers.origin}/cart`
       })
       res.status(200).json(session)
     } catch (error) {
