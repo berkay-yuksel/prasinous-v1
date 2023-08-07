@@ -1,5 +1,6 @@
 import { stripe } from "src/utils/stripe";
 import { validateCartItems } from "use-shopping-cart/utilities";
+
 export default async function handler(req, res) {
   if (req.method === "POST") {
     try {
@@ -14,7 +15,7 @@ export default async function handler(req, res) {
           id: product.id,
           name: product.name,
           price: price.unit_amount,
-          image: productçimages[0],
+          image: product.images[0],
         };
       });
       const lineItems = validateCartItems(products, cartDetails);
