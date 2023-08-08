@@ -15,7 +15,7 @@ function ProdCard({ product, index }) {
     toast.success(`${product.name} added`,{id});
   }
   return (
-    <Link href={`/products/${product.id}`}>
+    <Link  href={`/products/${product.id}`}>
       <div className={cardstyles.card}>
         <Image
           priority={index === 0}
@@ -33,7 +33,7 @@ function ProdCard({ product, index }) {
           </b>
         </p>
         <button onClick={onAddToCart}> Add to cart </button>
-        <button> <Link href={`/products/${product.id}`}> Buy now  </Link></button>
+      
       </div>
     </Link>
   );
