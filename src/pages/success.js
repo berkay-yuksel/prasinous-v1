@@ -6,7 +6,7 @@ export default function SuccessPage() {
 const {clearCart}=useShoppingCart();
 const router= useRouter()
 const sessionId= router.query.session_id
-const {data,error}= useSWR(`api/checkout-sessions/${sessionId}`,url=>axios.get(url).then(res=>res.data),
+const {data,error}= useSWR((sessionId ?`api/checkout-sessions/${sessionId}` :null),url=>axios.get(url).then(res=>res.data),
 {
     onSuccess(){
 clearCart();
